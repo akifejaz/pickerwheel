@@ -17,6 +17,9 @@ A dynamic web application for generating random numbers with customizable settin
 1. **Random Numbers**: Generate numbers within a specified range.  
 2. **Random Digits**: Generate multi-digit numbers (2-6 digits).
 
+![RNG Mode 01](./resources/fig-01.png)
+![RNG Mode 02](./resources/fig-02.png)
+
 #### Random Numbers Mode
 1. **By Range**:
    - Configurable minimum and maximum values.
