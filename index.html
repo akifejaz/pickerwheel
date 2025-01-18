@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <title>Number Picker</title>
+    <link rel="shortcut icon" href="resources/favicon.png" type="image/png" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="navbar">
+        <div id="site-identity">
+            <div id="logo">
+                <img src="resources/favicon.png" alt="" srcset="" />
+            </div>
+            <div id="site-title">
+                <h1>Number Picker</h1>
+            </div>
+        </div>
+        <div id="menu">
+            <h2 id="username" class="no-display"></h2>
+            <div id="settings-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-gear-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z" />
+                </svg>
+            </div>
+            <div id="login-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                    <path fill-rule="evenodd"
+                        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-content">
+        <div id="wheel-panel-wrapper">
+            <div id="wheel-panel-title-div">
+                <h2 id="wheel-title"></h2>
+                <h3 id="wheel-desc"></h3>
+            </div>
+            <div id="wheel-panel">
+                <div id="wheel-panel-title">
+                    <h1>Pick a random number...</h1>
+                </div>
+                <div id="wheel-area">
+                    <div id="inputs-handle-wrapper">
+                        <div id="inputs-handle">
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="50" fill="currentColor"
+                                    class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wheel-inputs-div-wrapper">
+                        <div id="wheel-inputs-div">
+                            <div id="wheel-inputs-header">
+                                <div id="wheel-inputs-title">
+                                    <h2>Inputs</h2>
+                                </div>
+                                <div id="inputs-buttons">
+                                    <div id="history-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                                            <path
+                                                d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z" />
+                                            <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z" />
+                                            <path
+                                                d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5" />
+                                        </svg>
+                                    </div>
+                                    <div id="shuffle-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-shuffle" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
+                                            <path
+                                                d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
+                                        </svg>
+                                    </div>
+                                    <div id="reset-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-arrow-counterclockwise"
+                                            viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z" />
+                                            <path
+                                                d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466" />
+                                        </svg>
+                                    </div>
+
+                                    <div id="collapse-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                                            fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd"
+                                                d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z" />
+                                            <path fill-rule="evenodd"
+                                                d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z" />
+                                        </svg>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div id="input-mode">
+                                <h3>Input Mode</h3>
+                                <div id="input-mode-radios" class="radios-div">
+                                    <input type="radio" name="input-mode" id="random-numbers" checked />
+                                    <label for="random-numbers">
+                                        <div>Random Numbers</div>
+                                    </label>
+                                    <input type="radio" name="input-mode" id="random-digits" />
+                                    <label for="random-digits">
+                                        <div>Random Digits</div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div id="random-numbers-mode">
+                                <div id="input-method">
+                                    <h3>Input Method</h3>
+                                    <div id="input-method-radios" class="radios-div">
+                                        <input type="radio" name="input-method" id="by-range" checked />
+                                        <label for="by-range">
+                                            <div>By Range</div>
+                                        </label>
+                                        <input type="radio" name="input-method" id="by-formula" />
+                                        <label for="by-formula">
+                                            <div>By Formula</div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="by-range-div">
+                                    <div id="range-input-div">
+                                        <h3>Range</h3>
+                                        <div id="range-input">
+                                            <table>
+                                                <tr>
+                                                    <td>
+                                                        <h4>MIN</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4>INTERVAL</h4>
+                                                    </td>
+                                                    <td>
+                                                        <h4>MAX</h4>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="number" name="range-min" id="range-min" min="0"
+                                                            value="0" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" name="range-interval" id="range-interval"
+                                                            min="0" value="1" />
+                                                    </td>
+                                                    <td>
+                                                        <input type="number" name="range-max" id="range-max" min="0"
+                                                            value="9" />
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div id="range-exclude-input-div">
+                                        <h3>Exclude</h3>
+                                        <div id="range-exclude-input">
+                                            <input type="text" name="range-exclude" id="range-exclude"
+                                                placeholder="Comma-separated list of numbers to exclude from the wheel" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div id="by-formula-div">
+                                    <h3>Formula</h3>
+                                    <div id="formula-input-div">
+                                        <textarea name="formula-input" id="formula-input" rows="10"></textarea>
+                                    </div>
+                                    <div id="process-formula" class="primary-button">
+                                        Process Formula
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="random-digits-mode">
+                                <div id="digits-display-div"></div>
+                                <div id="num-digits-div">
+                                    <h3>Number of Digits</h3>
+                                    <div id="num-digits-input" class="radios-div">
+                                        <input type="radio" name="num-digits" id="num-digits6" />
+                                        <label for="num-digits6">
+                                            <div>6</div>
+                                        </label>
+                                        <input type="radio" name="num-digits" id="num-digits5" />
+                                        <label for="num-digits5">
+                                            <div>5</div>
+                                        </label>
+                                        <input type="radio" name="num-digits" id="num-digits4" />
+                                        <label for="num-digits4">
+                                            <div>4</div>
+                                        </label>
+                                        <input type="radio" name="num-digits" id="num-digits3" checked />
+                                        <label for="num-digits3">
+                                            <div>3</div>
+                                        </label>
+                                        <input type="radio" name="num-digits" id="num-digits2" />
+                                        <label for="num-digits2">
+                                            <div>2</div>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div id="digit-ranges-div">
+                                    <h3>Digit Ranges</h3>
+                                    <table id="digit-ranges-table">
+                                        <th>
+                                        <td>6th</td>
+                                        <td>5th</td>
+                                        <td>4th</td>
+                                        <td>3rd</td>
+                                        <td>2nd</td>
+                                        <td>1st</td>
+                                        </th>
+                                        <tr>
+                                            <td>From:</td>
+                                            <td><input type="number" id="from6" min="0" max="9" value="0"></td>
+                                            <td><input type="number" id="from5" min="0" max="9" value="0"></td>
+                                            <td><input type="number" id="from4" min="0" max="9" value="0"></td>
+                                            <td><input type="number" id="from3" min="0" max="9" value="0"></td>
+                                            <td><input type="number" id="from2" min="0" max="9" value="0"></td>
+                                            <td><input type="number" id="from1" min="0" max="9" value="0"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>To:</td>
+                                            <td><input type="number" id="to6" min="0" max="9" value="9"></td>
+                                            <td><input type="number" id="to5" min="0" max="9" value="9"></td>
+                                            <td><input type="number" id="to4" min="0" max="9" value="9"></td>
+                                            <td><input type="number" id="to3" min="0" max="9" value="9"></td>
+                                            <td><input type="number" id="to2" min="0" max="9" value="9"></td>
+                                            <td><input type="number" id="to1" min="0" max="9" value="9"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wheel-canvas-div">
+                        <div id="spin-button">SPIN</div>
+                        <canvas id="wheel-canvas" width="600" height="600">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="result-modal" class="no-display modal">
+        <div id="result-modal-content">
+            <div id="result-message">The result is 0!</div>
+            <div id="ok-button">OK</div>
+        </div>
+    </div>
+
+    <div id="settings-modal" class="modal no-display">
+        <div id="settings-div">
+            <div id="settings-title-div">
+                <h2>Settings</h2>
+                <div id="settings-close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </div>
+            </div>
+            <div id="settings-tabs-div">
+                <div id="title-tab" target="title-settings-div" class="selected">Wheel Info</div>
+                <div id="colors-tab" target="colors-settings-div">Wheel Colors</div>
+                <div id="bg-color-tab" target="bg-color-settings-div">Background Color</div>
+                <div id="spin-tab" target="spin-settings-div">Spin Behavior</div>
+            </div>
+
+            <div id="title-settings-div" class="settings-div">
+                <label for="wheel-name-input">Name</label>
+                <input type="text" name="wheel-name-input" id="wheel-name-input">
+                <label for="wheel-title-input">Title</label>
+                <input type="text" name="wheel-title-input" id="wheel-title-input">
+                <label for="wheel-desc-input">Description</label>
+                <input type="text" name="wheel-desc-input" id="wheel-desc-input">
+            </div>
+
+            <div id="colors-settings-div" class="settings-div no-display">
+                <div id="colors-2d-radios-div">
+                </div>
+            </div>
+
+            <div id="bg-color-settings-div" class="settings-div no-display"></div>
+
+            <div id="spin-settings-div" class="settings-div no-display">
+                <label for="wheel-speed-input">Wheel Speed Level (1 to 10)</label>
+                <input type="number" name="wheel-speed-input" id="wheel-speed-input" min="1" max="10">
+                <label for="wheel-time-input">Wheel Spin Time (seconds)</label>
+                <input type="number" name="wheel-time-input" id="wheel-time-input" min="3" max="20">
+            </div>
+
+            <div id="settings-buttons">
+                <div id="settings-save-button" class="primary-button">Save</div>
+                <div id="settings-cancel-button" class="secondary-button">Cancel</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="history-modal" class="modal no-display">
+        <div id="history-modal-content">
+            <div id="history-header">
+                <h2>History</h2>
+                <div id="history-close-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708" />
+                    </svg>
+                </div>
+            </div>
+            <div id="history-div"></div>
+        </div>
+    </div>
+
+    <script src="js/components.js"></script>
+    <script src="js/vars.js"></script>
+    <script src="js/user.js"></script>
+    <script src="js/inputs.js"></script>
+    <script src="js/wheel-list.js"></script>
+    <script src="js/wheel.js"></script>
+    <script src="js/inputs-box.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/history.js"></script>
+</body>
+
+</html>

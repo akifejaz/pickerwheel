@@ -1,0 +1,62 @@
+var userInfo = document.getElementById("username")
+var loginButton = document.getElementById("login-button")
+
+var wheelTitle = document.getElementById("wheel-title")
+var wheelDesc = document.getElementById("wheel-desc")
+
+var resultModal = document.getElementById("result-modal")
+var resultModalMessage = document.getElementById("result-message")
+var resultModalOK = document.getElementById("ok-button")
+
+var inputsDiv = document.getElementById("wheel-inputs-div")
+var inputsDivWrapper = document.getElementById("wheel-inputs-div-wrapper")
+
+var inputModeRandomNumbersRadio = document.getElementById("random-numbers")
+var inputModeRandomDigitsRadio = document.getElementById("random-digits")
+var randomNumbersDiv = document.getElementById("random-numbers-mode")
+var randomDigitsDiv = document.getElementById("random-digits-mode")
+
+var randomNumbersByRangeRadio = document.getElementById("by-range")
+var randomNumbersByFormulaRadio = document.getElementById("by-formula")
+var byRangeDiv = document.getElementById("by-range-div")
+var byFormulaDiv = document.getElementById("by-formula-div")
+
+var rangeMinInput = document.getElementById("range-min")
+var rangeMaxInput = document.getElementById("range-max")
+var rangeIntervalInput = document.getElementById("range-interval")
+var rangeExcludeInput = document.getElementById("range-exclude")
+
+var formulaInput = document.getElementById("formula-input")
+var processFormulaButton = document.getElementById("process-formula")
+
+var spinButton = document.getElementById("spin-button")
+var historyButton = document.getElementById("history-button")
+var shuffleButton = document.getElementById("shuffle-button")
+var resetButton = document.getElementById("reset-button")
+var inputsHandle = document.getElementById("inputs-handle")
+var inputsHandleWrapper = document.getElementById("inputs-handle-wrapper")
+var collapseButton = document.getElementById("collapse-button")
+
+var digitsDisplay = document.getElementById("digits-display-div")
+var numDigits2 = document.getElementById("num-digits2")
+var numDigits3 = document.getElementById("num-digits3")
+var numDigits4 = document.getElementById("num-digits4")
+var numDigits5 = document.getElementById("num-digits5")
+var numDigits6 = document.getElementById("num-digits6")
+
+var from1 = document.getElementById("from1")
+var from2 = document.getElementById("from2")
+var from3 = document.getElementById("from3")
+var from4 = document.getElementById("from4")
+var from5 = document.getElementById("from5")
+var from6 = document.getElementById("from6")
+var to1 = document.getElementById("to1")
+var to2 = document.getElementById("to2")
+var to3 = document.getElementById("to3")
+var to4 = document.getElementById("to4")
+var to5 = document.getElementById("to5")
+var to6 = document.getElementById("to6")
+
+var historyModal = document.getElementById("history-modal")
+var historyCloseButton = document.getElementById("history-close-button")
+var historyDiv = document.getElementById("history-div")
